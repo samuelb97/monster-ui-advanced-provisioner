@@ -1,0 +1,58 @@
+{
+	"name": "provisioner",
+	"i18n": {
+		"de-DE": {
+			"label": "Erweiterte Bereitstellung",
+			"description": "Mit dieser App können Sie jede auf Ihrem Gerät verfügbare Einstellung mithilfe unseres Advanced Provisioner konfigurieren.",
+			"extended_description": "Stellen Sie die meisten SIP-Endpunkte schnell und einfach bereit. Unser Auto-Provisioning-Service ermöglicht es Ihnen, physische VoIP-Geräte remote zu programmieren, was die Bereitstellung beschleunigt und eine kontinuierliche Verwaltung erlaubt. Richten Sie geeignete Standardwerte für einen Reseller ein und überschreiben Sie dann bestimmte Features je nach dem Account, um jedem Kunden ein spezifisches Verhalten anzubieten. Oder passen Sie einzelne Telefongeräte je nach Bedarf noch weiter an. Führen Sie remote Neustarts von Telefonen durch, um diese zu zwingen, ihre Konfiguration zu aktualisieren, ohne dass dazu jemand vor Ort beim Kunden präsent sein muss. Eine verbesserte Sicherheit mit eindeutigen Hashwerten für jeden Account und IP-basierter Missbrauchserkennung schreckt Hacker ab.",
+			"features": [
+				"Unterstützt die meisten namhaften Hersteller",
+				"SRTP-/ ZRTP-Sicherheit",
+				"Codecs",
+				"Unterstützung für BLF/Leitungstaste",
+				"Account-weite Einstellungen",
+				"Netzwerkeinstellungen",
+				"Erkennen Sie Ihr Gerät auf einen Blick",
+				"Telefone hinzufügen/löschen",
+				"Konfigurationen ändern und Einstellungen anpassen"
+			]
+		},
+		"en-US": {
+			"label": "Advanced Provisioner",
+			"description": "This app allows you to customize every setting available on your device, with our Advanced Provisioner.",
+			"extended_description": "Provision most SIP endpoints quickly and easily. Our auto-provisioning service allows you to program physical VoIP devices remotely, speeding up deployment and allowing for ongoing management. Setup intelligent defaults for a reseller, then override specific features on a per-account basis as customers request different behavior. Or, further customize individual phones as needed. Remotely reboot phones to force them to update their configuration, without having to visit the customer’s site. Enhanced security provides for unique per-account hashes and IP-based abuse detection to deter hacking.",
+			"features": [
+				"Supports most major manufacturers",
+				"SRTP / ZRTP security",
+				"Codecs",
+				"BLF/line key support",
+				"Account wide settings",
+				"Network settings",
+				"Visually identify your device",
+				"Add/delete phones",
+				"Change configurations and customize settings"
+			]
+		}
+	},
+	"tags": [
+		"admin"
+	],
+	"icon": "Provisioning_app.png",
+	"api_url": "http://10.26.0.41:8000/v2",
+	"author": "2600Hz",
+	"version": "1.0",
+	"license": "-",
+	"price": 0,
+	"screenshots": [
+		"provisioner_1.png",
+		"provisioner_2.png",
+		"provisioner_3.png",
+		"provisioner_4.png"
+	],
+	"urls": {
+		"documentation": "{documentation_url}",
+		"howto": "{howto_video_url}"
+	},
+	"phase": "gold",
+	"pvt_type": "app"
+}

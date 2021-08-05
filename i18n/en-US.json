@@ -1,0 +1,119 @@
+{
+	"provisionerApp": {
+		"appName": "Advanced Provisioner",
+		"menus": {
+			"ipCheck": "IP Check",
+			"devices": "Devices",
+			"accountSettings": "Account Settings",
+			"providerSettings": "Provider Settings"
+		},
+		"listing": {
+			"provisionerUrl": "The Provisioner is configured with the following URL: ",
+			"bannedIp": "Your IP <strong>{{ip}}</strong> is banned, you can wait until ban expires or",
+			"unblockIp": "Unblock your IP",
+			"addDevice": "Add Device",
+			"headers": {
+				"name": "Device Name",
+				"status": "Status",
+				"macAddress": "MAC Address",
+				"brand": "Brand",
+				"model": "Model"
+			},
+			"item": {
+				"logs": "View Log File",
+				"config": "View Config Files",
+				"registered": "Registered",
+				"notRegistered": "Not Registered",
+				"configure": "Configure",
+				"unlock": "Unlock",
+				"restart": {
+					"label": "Restart",
+					"disabled": "It appears that this device doesn't exist in the platform anymore, or isn't registered, so we won't be able to send a Restart request for this device"
+				}
+			},
+			"loading": {
+				"title": "Fetching all devices"
+			}
+		},
+		"settings": {
+			"settingsNotSupported": "Settings not supported for this device",
+			"back": "Back",
+			"global": "Defaults",
+			"reseller": "Provider",
+			"account": "Account",
+			"inherit": "Inherit",
+			"inherits": {
+				"partOne": "Inherits ",
+				"partTwo": " from the "
+			},
+			"loading": {
+				"title": "Merging settings"
+			}
+		},
+		"entityCheck":{
+			"ip":{
+				"title": "Check IP status",
+				"text": {
+					"line1": "This tool checks to see if an IP address is blocked from provisioning due to abuse or other issues.",
+					"line2": "Please enter the public IP address that the phone sits on.",
+					"line3": "Note: 192.168.X.X or 10.X.X.X IPs are NOT public IPs, please enter only public IP addresses. Ask your IT administrator for help if you need it."
+				},
+				"placeholder": "IP Address",
+				"button": "Check Status"
+			}
+		},
+		"entityCheckResult": {
+			"title": "Status of IP address {{variable}}",
+			"button": "Back",
+			"statuses": {
+				"banned": {
+					"label": "Banned",
+					"tooltip": "This IP is temporarily banned because someone tried to load a config file manually, repeatedly tried to provision phones that weren’t yet in our system, or a few other reasons. This ban will automatically be removed in X minutes, at which point you can try again."
+				},
+				"failed": {
+					"label": "Failed"
+				},
+				"blacklist": {
+					"label": "Blacklisted",
+					"tooltip": "This IP is permanently blacklisted. To be removed from the blacklist, please contact support. If you do not have a support contract, please use the forums to list your complaint."
+				},
+				"whitelist": {
+					"label": "Whitelisted",
+					"tooltip": "This IP is permanently whitelisted and can’t be blocked."
+				}
+			}
+		},
+		"debugPopup": {
+			"download": "Download File",
+			"refresh": "Refresh File",
+			"empty": "No Existing File",
+			"loading": {
+				"logs": {
+					"title": "Fetching your logs"
+				},
+				"config": {
+					"title": "Downloading your config files"
+				}
+			}
+		},
+		"toastr": {
+			"info": {
+				"unknownMacAddress": "{{macAddress}} does not match any devices in your account's list!"
+			},
+			"success": {
+				"restart": "You successfully sent a Restart request to this device!",
+				"unlock": "Your device was unlocked successfully"
+			}
+		},
+		"alert": {
+			"confirm": {
+				"deleteDevice": "Are you sure you want to delete that device from the Provisioner?",
+				"generateFiles": {
+					"text": "Your settings are about to be updated. Do you want to generate the corresponding files?",
+					"cancel": "No",
+					"confirm": "Yes"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,100 @@
+{
+	"provisionerApp": {
+		"appName": "Advanced Provisioner (Erweiterte Bereitstellung)",
+		"menus": {
+			"ipCheck": "IP-Überprüfung",
+			"devices": "Geräte",
+			"accountSettings": "Account-Einstellungen",
+			"providerSettings": "Anbietereinstellungen"
+		},
+		"listing": {
+			"provisionerUrl": "Der Provisioner ist mit der folgenden URL konfiguriert: ",
+			"addDevice": "Gerät hinzufügen",
+			"headers": {
+				"name": "Gerätename",
+				"status": "Status",
+				"macAddress": "MAC-Adresse",
+				"brand": "Marke",
+				"model": "Modell"
+			},
+			"item": {
+				"logs": "Protokolldatei anzeigen",
+				"config": "Konfigurationsdateien anzeigen",
+				"registered": "Registriert",
+				"notRegistered": "Nicht registriert",
+				"configure": "Konfigurieren",
+				"unlock": "Entsperren",
+				"restart": {
+					"label": "Neustarten",
+					"disabled": "Anscheinend ist dieses Gerät in der Plattform nicht registriert oder nicht mehr vorhanden. Daher können wir auch keine Neustartanforderung für dieses Gerät senden"
+				}
+			},
+			"loading": {
+				"title": "Abrufen aller Geräte"
+			}
+		},
+		"settings": {
+			"settingsNotSupported": "Einstellungen, die für dieses Gerät nicht unterstützt werden",
+			"back": "Zurück",
+			"global": "Standardwerte",
+			"reseller": "Anbieter",
+			"account": "Account",
+			"inherit": "Übernehmen",
+			"inherits": {
+				"partOne": "Übernimmt ",
+				"partTwo": " aus den "
+			},
+			"loading": {
+				"title": "Zusammenführungs-Einstellungen"
+			}
+		},
+		"entityCheck":{
+			"ip":{
+				"title": "IP-Status überprüfen",
+				"placeholder": "IP-Adresse",
+				"button": "Status überprüfen"
+			}
+		},
+		"entityCheckResult": {
+			"title": "Statuswerte für",
+			"button": "Zurück",
+			"statuses": {
+				"banned": "Verboten",
+				"failed": "Fehlgeschlagen",
+				"blacklist": "In der Sperrliste aufgeführt",
+				"whitelist": "In der Zulassungsliste aufgeführt"
+			}
+		},
+		"debugPopup": {
+			"download": "Datei herunterladen",
+			"empty": "Keine Datei vorhanden",
+			"loading": {
+				"logs": {
+					"title": "Abrufen Ihrer Protokolle"
+				},
+				"config": {
+					"title": "Herunterladen Ihrer Konfigurationsdateien"
+				}
+			}
+		},
+		"toastr": {
+			"info": {
+				"unknownMacAddress": "{{macAddress}} passt zu keinem Gerät, das in der Liste Ihres Accounts aufgeführt ist!"
+			},
+			"success": {
+				"restart": "Dem Gerät wurde eine Neustartanfrage gesendet!",
+				"unlock": "Ihr Gerät wurde erfolgreich entsperrt"
+			}
+		},
+		"alert": {
+			"confirm": {
+				"deleteDevice": "Möchten Sie dieses Gerät wirklich im Provisioner löschen?",
+				"generateFiles": {
+					"text": "Ihre Einstellungen werden aktualisiert. Möchten Sie die zugehörigen Dateien generieren?",
+					"cancel": "Nein",
+					"confirm": "Ja"
+				}
+			}
+		}
+	}
+}
