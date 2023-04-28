@@ -19,18 +19,15 @@
 		},
 		"en-US": {
 			"label": "Advanced Provisioner",
-			"description": "This app allows you to customize every setting available on your device, with our Advanced Provisioner.",
-			"extended_description": "Provision most SIP endpoints quickly and easily. Our auto-provisioning service allows you to program physical VoIP devices remotely, speeding up deployment and allowing for ongoing management. Setup intelligent defaults for a reseller, then override specific features on a per-account basis as customers request different behavior. Or, further customize individual phones as needed. Remotely reboot phones to force them to update their configuration, without having to visit the customer’s site. Enhanced security provides for unique per-account hashes and IP-based abuse detection to deter hacking.",
+			"description": "Advanced Provisioner makes provisioning and managing devices easier than ever.",
+			"extended_description": "The easy-to-use device selector allows you to auto-provision a phone from Yealink, Polycom, Obihai, Htek, Grandstream, and Cisco in just a few clicks. Advanced Provisioner’s multi-tier architecture lets you specify who gets which settings by default, while still allowing the flexibility for custom settings on a per-account and per-device basis. Enhanced security features also provide unique per-account settings for additional peace of mind and IP-based abuse detection to deter hacking.",
 			"features": [
-				"Supports most major manufacturers",
-				"SRTP / ZRTP security",
-				"Codecs",
-				"BLF/line key support",
-				"Account wide settings",
-				"Network settings",
-				"Visually identify your device",
-				"Add/delete phones",
-				"Change configurations and customize settings"
+				"Speed up deployment and provision most popular SIP endpoints quickly",
+				"Auto-provision physical VoIP phones remotely",
+				"Provide single users with multiple devices",
+				"Check IP status to assist with troubleshooting",
+				"Remotely reboot phones to update their configuration",
+				"Customize settings for individual accounts and devices"
 			]
 		}
 	},

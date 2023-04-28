@@ -5,6 +5,7 @@
 			"ipCheck": "IP Check",
 			"devices": "Devices",
 			"accountSettings": "Account Settings",
+			"contactList": "Contact List",
 			"providerSettings": "Provider Settings"
 		},
 		"listing": {
@@ -12,6 +13,22 @@
 			"bannedIp": "Your IP <strong>{{ip}}</strong> is banned, you can wait until ban expires or",
 			"unblockIp": "Unblock your IP",
 			"addDevice": "Add Device",
+			"unlockAll": "Unlock All Devices",
+			"provisioningWindow": "Set Provisioning Window",
+			"openProvisioningWindow": {
+				"title": "Open provisioning window",
+				"description": "Allows a single IP for a period of time to provision devices",
+				"fields": {
+					"ipAddress": {
+						"label": "IP Address"
+					},
+					"hours": {
+						"label": "Provisioning Window Range: {{min}} - {{max}}",
+						"defaultValue": "24",
+						"addOnLabel": "hours"
+					}
+				}
+			},
 			"headers": {
 				"name": "Device Name",
 				"status": "Status",
@@ -48,6 +65,37 @@
 			},
 			"loading": {
 				"title": "Merging settings"
+			}
+		},
+		"contactList": {
+			"addContact": "Add Contact",
+			"directoryNames": "Display directory names",
+			"importCsv": "Import CSV",
+			"downloadCsv": "Download CSV",
+			"headers": {
+				"index": "Index",
+				"label": "Label",
+				"account": "Account",
+				"number": "Number"
+			},
+			"item": {
+				"edit": "Edit"
+			},
+			"tooltip": {
+				"directorynames": "Currently supported: Poly VVX400 devices."
+			},
+			"popup": {
+				"create": "Create contact",
+				"edit": "Edit contact",
+				"importCsv": "Import contact list",
+				"fields": {
+					"index": "Index",
+					"label": "Label",
+					"account": "Account",
+					"number": "Number"
+				},
+				"inheritIndex": "<b>Contact</b> will be stored at the end of the list if empty",
+				"inheritAccount": "<b>Account</b> will be set to 1 if not specified."
 			}
 		},
 		"entityCheck":{
@@ -102,12 +150,25 @@
 			},
 			"success": {
 				"restart": "You successfully sent a Restart request to this device!",
-				"unlock": "Your device was unlocked successfully"
+				"unlock": "Your device was unlocked successfully",
+				"unlockAll": "All devices were unlocked successfully",
+				"provisioningWindow": "Provisioning Window created successfully"
+			},
+			"warning": {
+				"unlockAllIncomplete": "Some devices could not be unlocked successfully : {{macAddresses}}"
+			},
+			"error": {
+				"getContactList": "There was an error getting the co",
+				"updateContactList": "Update Contact list failed.",
+				"updateDisplayDirectoryNames": "Update display directory names failed.",
+				"provisioningWindow": "Creation of new Provisioning Window created failed"
 			}
 		},
 		"alert": {
 			"confirm": {
 				"deleteDevice": "Are you sure you want to delete that device from the Provisioner?",
+				"deleteContact": "Are you sure you want to delete that contact from the list?",
+				"unlockAll": "Are you sure you want to unlock all devices? <br/> This operation could take a few minutes",
 				"generateFiles": {
 					"text": "Your settings are about to be updated. Do you want to generate the corresponding files?",
 					"cancel": "No",
