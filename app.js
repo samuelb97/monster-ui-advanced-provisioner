@@ -866,8 +866,29 @@ define("apps/provisioner/app", ["require", "jquery", "lodash", "monster", "foota
                 e(n[0])
             })
         },
+        /* Add for backward compatibility with kazoo v4.x.x
+		 * remove this function when backend updated to kazoo v5.x.x
+		 */
+		kzv4_compat_device_statuses: function(data) {
+			for (var i = 0; i < data.kazooDevices.length; i++) {
+				var matched = false;
+				for (var reg of data.registrations) {
+					if (reg.username === data.kazooDevices[i].username) {
+						data.kazooDevices[i]['registered'] = true;
+						matched = true;
+						break;
+					}
+				}
+				if (!matched) data.kazooDevices[i]['registered'] = false;
+				if (['sip_device', 'smartphone', 'softphone', 'fax', 'ata', 'application'].indexOf(data.kazooDevices[i].device_type) >= 0) {
+					data.kazooDevices[i]['registrable'] = true;
+				} else {
+					data.kazooDevices[i]['registrable'] = false;
+				}
+			}
+		},
         helperListAllDevices: function(t) {
-            var n = this;
+            var n = this, self = this;
             l.parallel({
                 devices: function(t) {
                     n.requestListDevices({
@@ -889,6 +910,23 @@ define("apps/provisioner/app", ["require", "jquery", "lodash", "monster", "foota
                         }
                     })
                 },
+                /* Added for backward compatibility with kazoo v4.x.x
+				 * remove this function when backend updated to kazoo v5.x.x
+				 */
+				registrations: function(callback) {
+					self.callApi({
+						resource: 'registrations.list',
+						data: {
+							accountId: n.accountId,
+							filters: {
+								paginate: 'false'
+							}
+						},
+						success: function(data) {
+							callback && callback(null, data.data);
+						}
+					});
+				},
                 statusIp: function(t) {
                     n.requestCheckOwnIpAddress({
                         data: {},
@@ -899,6 +937,11 @@ define("apps/provisioner/app", ["require", "jquery", "lodash", "monster", "foota
                     })
                 }
             }, function(n, a) {
+                /* Added for backward compatibility with kazoo v4.x.x
+				 * remove this function call when backend updated to kazoo v5.x.x
+				 */
+				self.kzv4_compat_device_statuses(a);
+                
                 var o = e.chain(a.kazooDevices).reject(function(t) {
                     return e.chain(t).get("mac_address", "").isEmpty().value()
                 }).map(function(t) {
